@@ -8,7 +8,7 @@ int countrange(const int *a,int length,int start,int end)
 	for(int i = 0;i<length;i++)
 	{
 	   if(a[i]>=start && a[i]<=end)
-		   count++;
+		count++;
 	}
 	return count;
 }
@@ -18,7 +18,7 @@ int getduplication(const int *a,int length)
 	int start = 0;
 	int end = length - 1;
 	
-    while(end >=  start)
+        while(end >=  start)
 	{
 		int mid = (start + end)/2; //start + (end - start)>>1
 		int count = countrange(a,length,start,mid);
@@ -34,7 +34,7 @@ int getduplication(const int *a,int length)
 		else
 			start = mid + 1;
 	 }
-     return -1;
+         return -1;
 }
 int main()
 {
